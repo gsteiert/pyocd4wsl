@@ -1,2 +1,4 @@
 # pyocd4wsl
-PyOCD that runs like a linux app in WSL with access to USB debuggers
+[PyOCD](https://github.com/pyocd/pyOCD) is a great tool for embedded development, but it needs access to USB debuggers.  [WSL (Windows Subsystem for Linux)](https://docs.microsoft.com/en-us/windows/wsl/) does not provide access to USB devices, so pyOCD does not work when you install it inside WSL.  However, pyOCD can also be installed in Windows and WSL can call windows applications from shell scripts.  This bash script can be used just like the native pyOCD inside WSL, but it runs the windows version so that it has full access to USB devices.  This way you get the full native linux pyOCD experience with support for USB debuggers inside WSL.
+
+To use, first install pyOCD in windows following the instructions from the [pyOCD documentation](https://github.com/pyocd/pyOCD), then clone this repository to your local WSL, add the directory to your path and make sure the pyocd file has execute permisions.  Then just follow the standard instructions for useing pyOCD in Linux.
